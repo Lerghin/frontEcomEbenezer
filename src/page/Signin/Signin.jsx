@@ -8,7 +8,7 @@ import { useDispatch } from 'react-redux';
 import { GoogleLogin } from '@react-oauth/google';
 import jwtDecode from 'jwt-decode';
 
-import { login } from '../../Store/Actions/authActions';
+import { login } from '../../store/Actions/authActions';
 import { LS } from '../../Utils/LS';
 
 

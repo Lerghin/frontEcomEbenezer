@@ -1,8 +1,8 @@
 
 import axios from 'axios';
 import { LS } from './LS';
-import { logoutUser } from '../Store/Actions/authActions';
-import store from '../Store/store';
+import { logoutUser } from '../store/Actions/authActions';
+import store from '../store/store';
 
 
 const API = axios.create({

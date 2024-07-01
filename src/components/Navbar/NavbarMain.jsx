@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { CiUser } from "react-icons/ci";
 import { LS } from "../../Utils/LS";
-import { logoutUser } from "../../Store/Actions/authActions";
+import { logoutUser } from "../../store/Actions/authActions";
 
 const Navbar = () => {
   const { user } = useSelector((store) => store.authReducer);

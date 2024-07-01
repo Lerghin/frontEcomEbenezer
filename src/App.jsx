@@ -31,7 +31,7 @@ import CreateProveedor from "./page/Proveedores/CrearProveedor.jsx";
 import Proveedores from "./page/Proveedores/Proveedores.jsx";
 import EditProveedor from "./page/Proveedores/EditarProveedores.jsx";
 import UserSalesDetails from "./page/Users/UserSalesDetails.jsx";
-import store from "./Store/store.js";
+import store from "./store/store.js";
 
 
 
