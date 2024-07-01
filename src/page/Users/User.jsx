@@ -6,7 +6,7 @@ import "./Users.css";
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from "react-router-dom";
 import { IoIosAdd } from "react-icons/io";
-import { API } from "../../Utils/axios.js";
+import { API } from "../../utils/axios.js";
 
 const Users = () => {
   const [users, setUsers] = useState([]);
