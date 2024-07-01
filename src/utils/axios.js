@@ -10,7 +10,7 @@ import { logoutUser } from '../store/actions/authActions.js';
 const API = axios.create({
   
  // baseURL:'http://localhost:4000/api',
-  baseURL:'https://ecomerceebenezerback.onrender.com/api',
+  baseURL:'https://mytinerary-back-cardenaslerghin.onrender.com/api',
 });
 
 API.interceptors.request.use(config => {
