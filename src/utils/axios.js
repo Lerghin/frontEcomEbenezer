@@ -7,7 +7,8 @@ import store from '../Store/store';
 
 const API = axios.create({
   
-  baseURL:'http://localhost:4000/api',
+ // baseURL:'http://localhost:4000/api',
+  baseURL:'https://ecomerceebenezerback.onrender.com',
 });
 
 API.interceptors.request.use(config => {
