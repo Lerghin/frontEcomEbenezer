@@ -12,7 +12,7 @@ import { API } from '../../utils/axios';
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { storage } from '../../credenciales';
 import { LS } from '../../utils/LS';
-import { signup } from '../../store/Actions/authActions';
+import { signup } from '../../../src/store/actions/authActions.js';
 
 const SignUp = () => {
   const dispatch = useDispatch();
