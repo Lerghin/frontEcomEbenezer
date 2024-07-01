@@ -2,9 +2,9 @@ import {  useNavigate } from "react-router-dom";
 
 import { FaUserEdit } from "react-icons/fa";
 import { MdDeleteForever } from "react-icons/md";
+import { API } from "../../utils/axios";
 
 
-import { API } from "../../Utils/axios";
 
 
 
