@@ -3,8 +3,11 @@ import "../Navbar/navbarmain.css";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { CiUser } from "react-icons/ci";
-import { LS } from "../../Utils/LS";
-import { logoutUser } from "../../store/Actions/authActions";
+import { LS } from "../../utils/LS";
+import { logoutUser } from "../../store/actions/authActions.js";
+
+//import { LS } from "../../Utils/LS";
+//import { logoutUser } from "../../store/Actions/authActions";
 
 const Navbar = () => {
   const { user } = useSelector((store) => store.authReducer);
