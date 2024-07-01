@@ -9,7 +9,7 @@ import { LS } from "../../utils/LS";
 import TableVent from "../../components/Tables/TableVent";
 
 import './ventas.css'; 
-import { API } from "../../Utils/axios";
+import { API } from "../../utils/axios";
 
 
  // Importa los estilos CSS
