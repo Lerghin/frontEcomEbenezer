@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Table from "react-bootstrap/Table";
 import { IoIosAdd } from "react-icons/io";
-import { API } from "../../Utils/axios";
+import { API } from "../../utils/axios.js";
 import { Button } from 'react-bootstrap';
 import { RiArrowGoBackFill } from 'react-icons/ri';
 import { useNavigate } from "react-router-dom";

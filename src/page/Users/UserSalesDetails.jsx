@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import { FiPrinter } from 'react-icons/fi';
 import { RiArrowGoBackFill } from 'react-icons/ri';
 import { generatePDFUserAndSales } from './generatePDFUserAndSales';
-import { API } from '../../Utils/axios';
+import { API } from '../../utils/axios.js';
 import './userSales.css';
 
 const UserSalesDetails = () => {

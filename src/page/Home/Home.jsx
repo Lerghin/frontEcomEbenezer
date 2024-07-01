@@ -5,14 +5,15 @@ import { useEffect, useState } from "react";
 import { useFilters } from './../../hooks/useFilters';
 import { Products } from './../../components/Products/Products';
 import { Cart } from "./../../components/Cart/Cart";
-import axios from "axios";
+
+import { API } from "../../utils/axios";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
   const { filterProducts } = useFilters();
 
   useEffect(() => {
-    axios.get('http://localhost:4000/api/products')
+    API.get('/products')
       .then(res => {
         setProducts(res.data.response);
         //console.log(res.data.response)
