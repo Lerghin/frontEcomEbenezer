@@ -1,0 +1,82 @@
+
+/* userSales.css */
+.container1 {
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+.user-sales-container {
+
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-card, .sales-card {
+  margin-bottom: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.user-card .card-body, .sales-card .card-body {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.card-text {
+  margin-bottom: 10px;
+}
+
+.table-responsive {
+  margin-top: 20px;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+.table th, .table td {
+  padding: 10px;
+  vertical-align: middle;
+  border-top: 1px solid #dee2e6;
+
+}
+
+.thead-dark th {
+
+  color: #fff;
+}
+
+.producto {
+  margin-bottom: 10px;
+}
+
+#buttons-container {
+  margin-top: 20px;
+}
+
+#buttons-container .btn {
+  margin-right: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  .table th, .table td {
+    font-size: 0.875rem;
+  }
+}

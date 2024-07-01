@@ -1,0 +1,48 @@
+/* createProduct.css */
+
+.container1 {
+     margin-top: 10rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 50%;
+  }
+  
+  h2 {
+    color: #343a40;
+    font-weight: bold;
+  }
+  
+  .form-label {
+    font-weight: bold;
+  }
+  
+  .form-control {
+    border-radius: 5px;
+  }
+  
+  .btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+  
+  .btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+  }
+  
+  .btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+  }
+  
+  .btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+  }
+  

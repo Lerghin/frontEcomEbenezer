@@ -1,0 +1,102 @@
+.products {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  max-height: 50%;
+  
+ 
+}
+
+.products ul {
+ 
+  display: grid; /* te deja en la lista*/
+  grid-template-columns: repeat(8, 1fr);
+  width: 80%;
+ 
+ grid-template-columns: repeat(
+    auto-fit,
+    minmax(
+      250px,
+      1fr
+    )
+  ); 
+  gap: 1rem;
+  flex-wrap: wrap;
+
+  
+}
+
+.products li {
+  display: flex;
+  flex-direction: column;
+  width:100%;
+
+  gap: 1rem;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, .1);
+  border-radius: 4px;
+  background: #111;
+  color: #fff;
+  padding: 1rem;
+  height: 40rem;
+}
+
+.products h3 {
+  margin: 0;
+}
+
+.products span {
+  font-size: 1rem;
+  opacity: .9;
+}
+
+.products img {
+  border-radius: 4px;
+  width: 100%;
+  min-height: 15vw;
+  aspect-ratio: 16/9;
+  display: block;
+  object-fit: cover;
+  background: #fff;
+}
+
+.edit-button, .delete-button {
+  
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #007bff;
+  font-size: 14px;
+  padding: 4px;
+  display: flex;
+ 
+  align-items: center;
+}
+
+.edit-button:hover {
+  color: #0056b3;
+}
+
+.delete-button {
+  color: #dc3545;
+}
+
+.delete-button:hover {
+  color: #c82333;
+}
+.product-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 1rem;
+  height: 100%;
+}
+.product-actions2 {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  margin-bottom: 1rem;
+  height: 100%;
+}

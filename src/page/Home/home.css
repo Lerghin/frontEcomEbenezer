@@ -1,0 +1,21 @@
+
+
+    @media (max-width: 768px) {
+        .productos{
+    
+            flex-grow: 1;
+            margin-top: 14rem;
+            
+            }
+
+            .imagen-card{
+
+              height: 50rem;
+
+            }
+          
+            
+    }
+  
+    
+  

@@ -1,0 +1,94 @@
+/* homeAdmin.css */
+
+.home {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: #f8f9fa; /* Color de fondo claro */
+    min-height: 100vh; 
+  padding-bottom: 2rem;/* Asegura que el contenido cubra toda la altura de la pantalla */
+  }
+  
+  .cardHome {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  
+    gap: 20px; /* Espacio entre las tarjetas */
+    max-width: 1200px; /* Limita el ancho máximo del contenedor */
+    margin: auto;
+    margin-top: 4rem !important;
+     /* Centra el contenedor */
+  }
+  
+  .cardIn {
+    flex: 1 1 300px; /* Tarjetas con ancho mínimo de 300px */
+    margin: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones para hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para las tarjetas */
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* Recorta el contenido sobrante */
+  }
+  
+  .cardIn:hover {
+    transform: translateY(-5px); /* Efecto de levantamiento al hacer hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta la sombra en hover */
+  }
+  
+  .cardIn .img-card {
+    height: 180px; /* Altura fija para la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsionarse */
+  }
+  
+  .card-body {
+    text-align: center; /* Centra el texto */
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    color: #6c757d; /* Color de texto más claro */
+  }
+  
+  .btn-secondary {
+    background-color: #6c757d; /* Color del botón */
+    border: none;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #5a6268; /* Color en hover */
+  }
+  
+  /* Media Queries para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .cardIn {
+      flex: 1 1 100%; /* Las tarjetas ocupan todo el ancho disponible */
+    }
+  }
+  
+  /* Media Queries para pantallas muy pequeñas */
+  @media (max-width: 850px) {
+
+
+    .cardIn {
+      display: flex;
+ 
+    margin-top: 15rem; 
+   
+    }
+
+
+    .cardHome {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem; 
+   
+        
+      }
+  }
+  

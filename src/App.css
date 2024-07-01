@@ -1,0 +1,21 @@
+
+
+.app-layout{
+min-height: 100vh;
+display:flex ;
+flex-direction: column;
+background-color: rgb(207, 214, 218);
+}
+
+.app-header{
+  height:5vh;
+  background-color: black;
+
+}
+
+
+
+.app-container {
+  max-width: 100%;
+  overflow-x: hidden;
+}

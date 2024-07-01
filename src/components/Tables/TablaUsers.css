@@ -1,0 +1,16 @@
+/* TablaUsers.css */
+
+/* Estilos específicos para los usuarios con el rol "USER" */
+.namePatient {
+    font-weight: bold;       /* Hacer que el texto sea negrita */
+    color: #007bff;          /* Color del texto */
+    background-color: #f0f8ff; /* Fondo para destacar */
+  }
+  
+  .link-unstyled {
+    text-decoration: none;   /* Quitar el subrayado del enlace */
+    color: inherit;          /* Mantener el color del enlace igual al color del texto */
+  }
+  
+  /* Otros estilos que quieras aplicar */
+  

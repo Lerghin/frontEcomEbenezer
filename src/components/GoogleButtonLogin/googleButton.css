@@ -1,0 +1,12 @@
+#google{
+
+    margin-top: 10px;
+    background-color: black;
+    border-color: none;
+}
+
+#google:hover{
+
+    transform: scale(1.2);
+    background-color: rgb(158, 20, 101);
+}

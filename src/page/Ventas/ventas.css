@@ -1,0 +1,65 @@
+.form-control{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+.table-container {
+    overflow-x: auto;
+    margin-top: 20px;
+
+  }
+
+  .link-unstyled {
+    text-decoration: none; 
+    color: inherit; 
+  }
+  .namePatient:hover::after{
+
+    content: "Ver Ventas";
+    position: absolute;
+    background-color: #2584A7;
+    color: #fff;
+    padding: 5px;
+    margin-top: 3%;
+    border-radius: 5px;
+    transform: translateX(-50%); 
+    z-index: 999;
+
+   
+  }
+  
+  .table-custom {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+  }
+  
+  .table-custom th, .table-custom td {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .table-custom th {
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  .table-custom td {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .table-custom tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .table-custom th, .table-custom td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .table-custom th, .table-custom td {
+      font-size: 14px;
+      padding: 6px;
+    }
+  }
+  

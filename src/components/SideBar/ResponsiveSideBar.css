@@ -1,0 +1,41 @@
+/* En tu archivo CSS (ResponsiveSideBar.css) */
+.sidebar-custom {
+    display: flex;
+    height: 100vh; /* Ajustado a la vista de la ventana */
+    overflow: auto; /* Permitir desplazamiento si el contenido es grande */
+  }
+  
+  .sidebar-custom .sidebar-header {
+    background-color: #000; /* Negro */
+    color: #fff; /* Blanco */
+  }
+  
+  .sidebar-custom .sidebar-content {
+    background-color: #2584A7 ; /* Rojo */
+    color: #fff; /* Blanco */
+  }
+  
+  .sidebar-custom .sidebar-footer {
+    background-color: #000; /* Negro */
+    color: #fff; /* Blanco */
+  }
+  
+  .sidebar-custom .menu-item {
+    color: #fff; /* Blanco */
+  }
+  
+  .sidebar-custom .menu-item:hover {
+    background-color: #fff; /* Blanco */
+    color:#2584A7 ; 
+  }
+  
+  .sidebar-custom .logout-button {
+    background-color: #000; /* Negro */
+    color: #fff; /* Blanco */
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+  }
+  

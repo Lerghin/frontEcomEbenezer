@@ -1,0 +1,141 @@
+/* Proveedores.css */
+
+/* Estilos generales */
+.home {
+    padding: 20px;
+
+  }
+  
+  .patientsTable {
+    margin-top: 20px;
+  }
+  
+  /* Estilo de la tabla */
+  .table {
+    margin-top: 20px;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Celdas de la tabla */
+  .table th,
+  .table td {
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+  .table th {
+    background-color: #343a40;
+    color: white;
+  }
+  
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f8f9fa;
+  }
+  
+  .table-hover tbody tr:hover {
+    background-color: #e9ecef;
+  }
+  
+  /* Botones de acción */
+  .table .action-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .table .action-icons svg {
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #495057;
+    transition: color 0.3s;
+  }
+  
+  .table .action-icons svg:hover {
+    color: #007bff;
+  }
+  
+  /* Estilos para el buscador y botón agregar */
+  .search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .search-container input {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+  }
+  
+  .search-container button {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+  }
+  
+  .search-container button svg {
+    margin-left: 10px;
+  }
+  
+  .search-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Estilos para la vista de error o carga */
+  .error-message,
+  .loading-message,
+  .no-results-message {
+    text-align: center;
+    font-size: 1.2em;
+    color: #dc3545;
+    margin-top: 20px;
+  }
+  
+  .no-results-message {
+    color: #6c757d;
+  }
+  
+  /* Alinear los botones de volver y agregar */
+  .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .button-container button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+  }
+  
+  .button-container button svg {
+    margin-left: 10px;
+  }
+  
+
+  @media (max-width: 768px) {
+    .home{
+
+        flex-grow: 1;
+        margin-top: 14rem;
+        width: 100%;
+        
+        }
+    
+
+        
+}

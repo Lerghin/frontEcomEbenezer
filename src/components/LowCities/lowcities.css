@@ -1,0 +1,22 @@
+.card {
+  display: flex;
+background-color: rgb(157, 204, 204);
+margin: 2rem;
+text-align: center;
+justify-content: center;
+
+}
+
+.same-height-img {
+   height: 50px;
+   object-fit: cover;
+ }
+
+
+ .grow-on-hover {
+   transition: transform 0.3s ease;
+ }
+ 
+ .grow-on-hover:hover {
+   transform: scale(1.05);
+ }
