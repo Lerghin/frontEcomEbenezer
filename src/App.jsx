@@ -21,7 +21,6 @@ import "react-toastify/dist/ReactToastify.css";
 import Comprar from "./page/Comprar/Comprar";
 import { CartProvider } from './components/context/cart.jsx';
 import HomeAdmin from "./page/Home/HomeAdmin.jsx";
-import store from "./Store/store.js";
 import Productos from "./page/Productos/Productos.jsx";
 import CreateProduct from "./page/Productos/AddProduct.jsx";
 import EditProduct from "./page/Productos/EditProduct.jsx";
@@ -32,21 +31,10 @@ import CreateProveedor from "./page/Proveedores/CrearProveedor.jsx";
 import Proveedores from "./page/Proveedores/Proveedores.jsx";
 import EditProveedor from "./page/Proveedores/EditarProveedores.jsx";
 import UserSalesDetails from "./page/Users/UserSalesDetails.jsx";
+import store from "./Store/store.js";
 
 
 
-/*
-import { Products } from './components/Products/Products.jsx';
-import {products as initialProducts} from '../src/mocks/products.json';
-import {useState} from 'react'
-
-
-import {useFilters}from './hooks/useFilters.js'
-import { CartProvider } from './components/context/cart.jsx';
-import { Cart } from "./components/Cart/Cart.jsx";
-import Main from './components/Main/Main.jsx';
-
-*/
 
 const ProtectedRoute = ()=>{
   const {status}= useSelector(store=>store.authReducer)
@@ -147,32 +135,7 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  /* const dispatch= useDispatch();
-useEffect(()=>{
-dispatch(authenticate())
-},[])
 
-*/
-  /*
- useGoogleOneTapLogin({
-onSuccess: async credentialResponse => {
-console.log(credentialResponse);
-const infoUser= jwtDecode(credentialResponse.credential)
-const userData= {
-email: infoUser.email,
-password: "Alicia.0609"
-}
-const res= await server.post('/auth/in', userData)
-console.log(res)
-dispatch(login(res.data))
-},
-onError: ()=>{
-  console.log('login failed')
-}
-
- })
-
-*/
 
   return (
    
