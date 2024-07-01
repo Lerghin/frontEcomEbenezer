@@ -1,5 +1,6 @@
 import { createReducer } from "@reduxjs/toolkit";
-import { authenticate, login, logout, signup } from "../Actions/authActions";
+import { authenticate, login, logout, signup } from "../actions/authActions.js";
+//import { authenticate, login, logout, signup } from "../Actions/authActions";
 //import { login, signup, authenticate, logout } from '';
 
 
