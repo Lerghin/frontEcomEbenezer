@@ -4,12 +4,10 @@ import { API } from '../../utils/axios';
 import '../Signin/signin.css';
 import { useNavigate } from 'react-router';
 import { useDispatch } from 'react-redux';
-
 import { GoogleLogin } from '@react-oauth/google';
 import jwtDecode from 'jwt-decode';
-
 import { login } from '../../store/Actions/authActions';
-import { LS } from '../../Utils/LS';
+import { LS } from '../../utils/LS';
 
 
 

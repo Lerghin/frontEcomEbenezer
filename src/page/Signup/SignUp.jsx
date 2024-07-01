@@ -7,11 +7,12 @@ import { useDispatch } from 'react-redux';
 import { toast } from 'react-toastify';
 import { useState } from 'react';
 
-import { signup } from '../../store/Actions/authActions';
+
 import { API } from '../../utils/axios';
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { storage } from '../../credenciales';
 import { LS } from '../../utils/LS';
+import { signup } from '../../store/Actions/authActions';
 
 const SignUp = () => {
   const dispatch = useDispatch();
