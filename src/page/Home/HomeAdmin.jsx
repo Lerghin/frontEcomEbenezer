@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import './homeAdmin.css';
 import { API } from '../../utils/axios';
-import { LS } from '../../Utils/LS';
+import { LS } from '../../utils/LS';
 
 const HomeAdmin = () => {
   const [userRole, setUserRole] = useState(null);
