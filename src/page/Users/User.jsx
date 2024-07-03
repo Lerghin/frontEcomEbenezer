@@ -52,8 +52,15 @@ const Users = () => {
         />
         <br /><br />
             <Button onClick={() => navigate('/crearAdmin')} variant="btn btn-primary"> Agregar Administrador <IoIosAdd /> </Button>
+           
+
       </div>
+ 
+      
       <div className="table-responsive">
+        <div className="d-flex justify-content-center">
+      <Button className="btn btn-secondary w-8" onClick={() => navigate('/homeAdmin')}>Volver</Button>
+      </div>
         <Table striped bordered hover>
           <thead>
             <tr>

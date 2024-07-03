@@ -4,21 +4,21 @@
     padding: 20px;
     display: flex;
     justify-content: center;
-    background-color: #f8f9fa; /* Color de fondo claro */
+    background-color: #f8f9fa; 
     min-height: 100vh; 
-  padding-bottom: 2rem;/* Asegura que el contenido cubra toda la altura de la pantalla */
-  }
+  padding-bottom: 2rem;
+}
   
   .cardHome {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-  
     gap: 20px; /* Espacio entre las tarjetas */
     max-width: 1200px; /* Limita el ancho máximo del contenedor */
     margin: auto;
     margin-top: 4rem !important;
-     /* Centra el contenedor */
+    width: 40%;
+    
   }
   
   .cardIn {
@@ -87,6 +87,7 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 1rem; 
+     
    
         
       }

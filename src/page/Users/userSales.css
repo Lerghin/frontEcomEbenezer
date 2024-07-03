@@ -74,9 +74,22 @@
 @media (max-width: 768px) {
   .container {
     padding: 15px;
+    
+ 
   }
 
   .table th, .table td {
+   
     font-size: 0.875rem;
+   
+
+
+  }
+
+
+  .sales-card{
+    display: flex;
+    margin-top: 10rem;
+    width: 100%;
   }
 }

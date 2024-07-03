@@ -1,0 +1,50 @@
+/* PostulacionFormulario.css */
+
+.postulacion-form-container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  .postulacion-form-container .form-control {
+    border-radius: 5px;
+  }
+  
+  .postulacion-form-container .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    border-radius: 5px;
+  }
+  
+  .postulacion-form-container .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+  
+  .postulacion-form-container .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .postulacion-form-container .text-center a {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .postulacion-form-container .text-center a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+  
+  .shadow {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  }
+  
+  .bg-light {
+    background-color: #f8f9fa !important;
+  }
+  
+  .rounded {
+    border-radius: 0.5rem !important;
+  }
+  

@@ -32,6 +32,13 @@ import Proveedores from "./page/Proveedores/Proveedores.jsx";
 import EditProveedor from "./page/Proveedores/EditarProveedores.jsx";
 import UserSalesDetails from "./page/Users/UserSalesDetails.jsx";
 import store from "./store/store.js";
+import MisCompras from "./page/Users/MisCompras.jsx";
+import Address from "./page/ADDRESS/address.jsx";
+import CreateAddress from "./page/ADDRESS/crearDirecciones.jsx";
+import EditAddress from "./page/ADDRESS/EditAddress.jsx";
+import ViewPostulaciones from "./page/Jobs/VerPostulaciones.jsx";
+import PostulacionFormulario from "./page/Jobs/Postulacion.jsx";
+import Postulacion from "./page/Jobs/Postulacion.jsx";
 
 
 
@@ -106,7 +113,31 @@ const router = createBrowserRouter([
               path: '/watchUser/:id',
               element: <UserSalesDetails />
             },
+            {
+              path: '/misCompras',
+              element: <MisCompras />
+            },
+            {
+              path: '/misDirecciones',
+              element: <Address />
+            },
+            {
+              path: '/createAddress',
+              element: <CreateAddress />
+            },
 
+            {
+              path: '/editAddress/:id',
+              element: <EditAddress />
+            },
+            {
+              path: '/viewJobs',
+              element: <ViewPostulaciones />
+            },
+            {
+              path: '/jobs',
+              element: <Postulacion />
+            }
 
 
            

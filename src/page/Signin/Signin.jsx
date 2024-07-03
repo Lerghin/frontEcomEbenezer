@@ -4,8 +4,6 @@ import { API } from '../../utils/axios';
 import '../Signin/signin.css';
 import { useNavigate } from 'react-router';
 import { useDispatch } from 'react-redux';
-import { GoogleLogin } from '@react-oauth/google';
-import jwtDecode from 'jwt-decode';
 import { login } from '../../store/actions/authActions.js';
 import { LS } from '../../utils/LS';
 
@@ -72,37 +70,6 @@ const Signin = () => {
   };
  
 
-  const handleGoogleLogin = async (response) => {
-    console.log(response);
-    const infoUser = jwtDecode(response.credential);
-    console.log(infoUser);
-
-    console.log(infoUser.email);
-    setData({
-      email: infoUser.email,
-      password: 'Alicia.0609',
-    });
-
-    const userData = {
-      email: infoUser.email,
-      password: 'Alicia.0609',
-    };
-
-    const res = await API.post('/auth/in', userData);
-    console.log(res);
-    dispatch(login(res.data));
- 
-    if (res.status === 200) {
-      alert('You are logged in successfully');
-      navigate('/comprar');
-      const { token } = res.data;
-      LS.set('token', token);
-
-      navigate('/comprar');
-
-    }
-  };
-
 
 
   return (
@@ -131,17 +98,7 @@ const Signin = () => {
         </p>
       </div>
 
-      <div className="google">
-        <GoogleLogin
-          clientId="302009379903-lvfvam4poqchau007anb4eqh2oshuoig.apps.googleusercontent.com"
-          buttonText="Sign in with Google"
-          onSuccess={handleGoogleLogin}
-          onFailure={(error) => {
-            console.log('Login Failed:', error);
-          }}
-          useOneTap
-        />
-      </div>
+    
     </div>
   );
 };

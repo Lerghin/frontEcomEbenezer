@@ -1,13 +1,9 @@
 import { Link, useNavigate } from 'react-router-dom';
 import '../Signup/signup.css';
 import { countries } from '../../data/countries';
-import { GoogleLogin } from '@react-oauth/google';
-import jwtDecode from 'jwt-decode';
 import { useDispatch } from 'react-redux';
 import { toast } from 'react-toastify';
 import { useState } from 'react';
-
-
 import { API } from '../../utils/axios';
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { storage } from '../../credenciales';
@@ -189,6 +185,7 @@ const SignUp = () => {
             onChange={handleChangeData}
             required
           />
+          <span>La contraseña debe tener mínimo 8 caracteres, al menos un caracter especial, al menos un numero, la menos una mayuscula</span>
         </div>
         <div className="form-group">
           <label htmlFor="country">País de Residencia:</label>
@@ -257,30 +254,7 @@ const SignUp = () => {
             required
           />
         </div>
-        <div className="google">
-          <GoogleLogin className='google'
-            clientId='302009379903-lvfvam4poqchau007anb4eqh2oshuoig.apps.googleusercontent.com'
-            onSuccess={(credentialResponse) => {
-              console.log(credentialResponse);
-              const infoUser = jwtDecode(credentialResponse.credential);
-              console.log(infoUser);
-              setData({
-                name: infoUser.given_name,
-                lastName: infoUser.family_name,
-                email: infoUser.email,
-                password: 'Alicia.0609',
-                country: infoUser.locale,
-                photo: infoUser.picture,
-                role: 'USER', // Establece un rol por defecto si es necesario
-                phone: '000000000',
-                terms: true
-              });
-            }}
-            onError={() => {
-              console.log('Login Failed');
-            }}
-            useOneTap />
-        </div>
+       
         <button type="submit" className="signup-button" disabled={isUploadingPhoto}>
           Registrar
         </button>

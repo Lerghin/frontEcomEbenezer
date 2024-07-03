@@ -1,0 +1,55 @@
+/* Archivo: RegisterAddressForm.css */
+
+.register-form-container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  .custom-form {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+  }
+  
+  .shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    color: #e9ebee;
+  }
+  
+  .custom-form .form-control {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+  }
+  
+  .custom-form .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+  .custom-form .btn-primary {
+    background-color: #007bff;
+    border: none;
+  }
+  
+  .custom-form .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  .custom-form .btn-primary:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+  }
+  
+  .custom-form .text-danger {
+    color: #dc3545;
+    font-weight: bold;
+  }
+  
+  .custom-form .text-success {
+    color: #28a745;
+    font-weight: bold;
+  }
+  

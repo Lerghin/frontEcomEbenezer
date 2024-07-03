@@ -82,6 +82,9 @@ const Proveedores = () => {
       </div>
 
       <div className="patientsTable">
+      <div className="d-flex justify-content-center">
+      <Button className="btn btn-secondary w-8" onClick={() => navigate('/homeAdmin')}>Volver</Button>
+      </div>
         {results.length > 0 ? (
           <Table striped bordered hover className="table">
             <thead>

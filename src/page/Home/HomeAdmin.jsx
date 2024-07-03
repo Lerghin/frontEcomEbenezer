@@ -61,27 +61,18 @@ const HomeAdmin = () => {
             <Card.Body>
               <Card.Title>Mis Compras</Card.Title>
               <Card.Text>Ver mis compras</Card.Text>
-              <Button onClick={() => navigate('/vacantes')} variant="btn btn-secondary">Gestionar</Button>
+              <Button onClick={() => navigate('/misCompras')} variant="btn btn-secondary">Gestionar</Button>
             </Card.Body>
           </Card>
         )}
-        {userRole !== 'ADMIN' && (
-          <Card className="cardIn">
-            <Card.Img className="img-card" variant="top" src="https://imagenes.eltiempo.com/files/image_1200_600/uploads/2023/10/12/652852379fc43.png" />
-            <Card.Body>
-              <Card.Title><b>Mi Perfil</b></Card.Title>
-              <Card.Text>Ver mi Perfil</Card.Text>
-              <Button onClick={() => navigate('/vacantUser')} variant="btn btn-secondary">Ver</Button>
-            </Card.Body>
-          </Card>
-        )}
+       
          {userRole !== 'ADMIN' && (
           <Card className="cardIn">
             <Card.Img className="img-card" variant="top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBV95swCwVBNA1P1kM0p05b4VVH2z1orE-Pg&s" />
             <Card.Body>
               <Card.Title><b>Mis Direcciones</b></Card.Title>
               <Card.Text>Ver mis Direcciones</Card.Text>
-              <Button onClick={() => navigate('/vacantUser')} variant="btn btn-secondary">Ver</Button>
+              <Button onClick={() => navigate('/misDirecciones')} variant="btn btn-secondary">Ver</Button>
             </Card.Body>
           </Card>
         )}
@@ -101,7 +92,7 @@ const HomeAdmin = () => {
             <Card.Body>
               <Card.Title><b>Trabajo Si Hay</b></Card.Title>
               <Card.Text>Trabaja Nosotros </Card.Text>
-              <Button onClick={() => navigate('/vacantUser')} variant="btn btn-secondary">Ver</Button>
+              <Button onClick={() => navigate('/jobs')} variant="btn btn-secondary">Ver</Button>
             </Card.Body>
           </Card>
         )}
@@ -151,7 +142,7 @@ const HomeAdmin = () => {
             <Card.Body>
               <Card.Title>Postulaciones</Card.Title>
               <Card.Text>Postulacion de Trabajo</Card.Text>
-              <Button onClick={() => navigate('/users')} variant="btn btn-secondary">Gestionar</Button>
+              <Button onClick={() => navigate('/viewJobs')} variant="btn btn-secondary">Gestionar</Button>
             </Card.Body>
           </Card>
         )}
