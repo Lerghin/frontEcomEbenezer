@@ -79,6 +79,7 @@ const Proveedores = () => {
         <Button onClick={() => navigate('/crearProveedor')} className="add-button">
           Agregar Proveedor <IoIosAdd />
         </Button>
+        
       </div>
 
       <div className="patientsTable">

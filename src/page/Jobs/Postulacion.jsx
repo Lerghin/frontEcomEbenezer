@@ -1,27 +1,27 @@
-import { useEffect, useState } from 'react';
-import { Form, Button, Container, Row, Col } from 'react-bootstrap';
-import './Formulario.css'; // Archivo CSS para estilos adicionales
-import { API } from '../../utils/axios';
-import { useNavigate } from 'react-router';
-import { LS } from '../../utils/LS';
-import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
-import { storage } from '../../credenciales';
-import { toast } from 'react-toastify';
+import { useEffect, useState } from "react";
+import { Form, Button, Container, Row, Col } from "react-bootstrap";
+import "./Formulario.css"; // Archivo CSS para estilos adicionales
+import { API } from "../../utils/axios";
+import { useNavigate } from "react-router";
+import { LS } from "../../utils/LS";
+import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import { storage } from "../../credenciales";
+import { toast } from "react-toastify";
 
 const Formulario = () => {
-  const [nombre, setNombre] = useState('');
-  const [apellido, setApellido] = useState('');
-  const [cedula, setCedula] = useState('');
-  const [profesion, setProfesion] = useState('');
-  const [userId, setUserId] = useState('');
-  const [cv, setCv] = useState('');
+  const [nombre, setNombre] = useState("");
+  const [apellido, setApellido] = useState("");
+  const [cedula, setCedula] = useState("");
+  const [profesion, setProfesion] = useState("");
+  const [userId, setUserId] = useState("");
+  const [cv, setCv] = useState("");
   const [isUploading, setIsUploading] = useState(false);
   const [cvUploaded, setCvUploaded] = useState(false);
 
   const navigate = useNavigate();
 
   useEffect(() => {
-    const userID = LS.getText('userID').trim();
+    const userID = LS.getText("userID").trim();
     if (userID) {
       setUserId(userID);
     }
@@ -30,7 +30,8 @@ const Formulario = () => {
   const handleCvChange = (e) => {
     const selectedFile = e.target.files[0];
     if (selectedFile) {
-      if (selectedFile.size > 1048576) { // 1MB en bytes
+      if (selectedFile.size > 1048576) {
+        // 1MB en bytes
         toast.error("El archivo excede el tamaño máximo de 1MB.");
         return;
       }
@@ -43,7 +44,8 @@ const Formulario = () => {
       uploadTask.on(
         "state_changed",
         (snapshot) => {
-          const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+          const progress =
+            (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
           console.log(`Upload is ${progress}% done`);
         },
         (error) => {
@@ -72,29 +74,29 @@ const Formulario = () => {
       cedula,
       profesion,
       cv,
-      userId
+      userId,
     };
 
     console.log(data);
 
     try {
       // Suponiendo que tu API usa headers para autenticación, inclúyelos aquí
-      const response = await API.post('/postulaciones', data, {
+      const response = await API.post("/postulaciones", data, {
         headers: {
-          Authorization: `Bearer ${localStorage.getItem('token')}`
-        }
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
       });
 
       if (response.status === 201) {
-        toast.success('Postulación enviada con éxito');
-        navigate('/homeAdmin');
+        toast.success("Postulación enviada con éxito");
+        navigate("/homeAdmin");
       } else {
-        console.error('Error al enviar la postulación');
-        toast.error('Error al enviar la postulación');
+        console.error("Error al enviar la postulación");
+        toast.error("Error al enviar la postulación");
       }
     } catch (error) {
-      console.error('Error al enviar la postulación:', error);
-      toast.error('Error al enviar la postulación');
+      console.error("Error al enviar la postulación:", error);
+      toast.error("Error al enviar la postulación");
     }
   };
 
@@ -153,7 +155,9 @@ const Formulario = () => {
               />
               {cvUploaded && (
                 <div className="mt-2">
-                  <a href={cv} target="_blank" rel="noopener noreferrer">Ver CV Subido</a>
+                  <a href={cv} target="_blank" rel="noopener noreferrer">
+                    Ver CV Subido
+                  </a>
                 </div>
               )}
             </Form.Group>
@@ -163,8 +167,16 @@ const Formulario = () => {
                 type="submit"
                 disabled={isUploading || !cvUploaded}
               >
-                {isUploading ? 'Subiendo CV...' : 'Enviar Postulación'}
+                {isUploading ? "Subiendo CV..." : "Enviar Postulación"}
               </Button>
+              <div className="d-flex justify-content-center">
+                <Button
+                  className="btn btn-secondary w-8"
+                  onClick={() => navigate("/homeAdmin")}
+                >
+                  Volver
+                </Button>
+              </div>
             </div>
           </Form>
         </Col>

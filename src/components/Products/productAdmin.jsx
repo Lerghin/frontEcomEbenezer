@@ -7,6 +7,7 @@ import { toast } from 'react-toastify';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
+
 export function ProductAdmin({ products }) {
   const navigate = useNavigate();
   const [productList, setProductList] = useState([]);
@@ -55,6 +56,7 @@ export function ProductAdmin({ products }) {
 
   return (
     <main className='products'>
+      
       <ul>
         {productList.slice(0, 30).map(product => {
           return (

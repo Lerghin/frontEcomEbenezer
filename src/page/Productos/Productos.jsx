@@ -8,6 +8,7 @@ import Button from 'react-bootstrap/Button';
 import { useNavigate } from "react-router-dom";
 import { IoIosAdd } from "react-icons/io";
 import { ProductAdmin } from "../../components/Products/productAdmin";
+import { RiArrowGoBackFill } from 'react-icons/ri';
 
 const Productos = () => {
   const [products, setProducts] = useState([]);
@@ -36,7 +37,13 @@ const Productos = () => {
        
           <Main /> <Button onClick={() => navigate('/addProducto')} variant="btn btn-secondary"> Agregar Producto  <IoIosAdd /> </Button>
        <br /><br />
+    
        </div>
+       <div id="buttons-container" className="d-flex justify-content-center gap-3 p-4">
+      
+      <Button onClick={() => navigate('/homeAdmin')} variant="primary"><RiArrowGoBackFill /> Volver</Button> 
+      <br/>   <br/>
+    </div>
         
         <ProductAdmin key={products._id} products={filteredProducts}  />
       

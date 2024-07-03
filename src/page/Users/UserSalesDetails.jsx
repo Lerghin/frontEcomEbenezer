@@ -5,12 +5,13 @@ import { FiPrinter } from 'react-icons/fi';
 import { RiArrowGoBackFill } from 'react-icons/ri';
 import { generatePDFUserAndSales } from './generatePDFUserAndSales';
 import { API } from '../../utils/axios.js';
-import './userSales.css';
+import './userSales.css';  // Archivo CSS para estilos adicionales
 
 const UserSalesDetails = () => {
   const navigate = useNavigate();
   const { id } = useParams();
   const [user, setUser] = useState(null);
+  const [address, setAddress] = useState([]);
   const [salesList, setSalesList] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -18,12 +19,14 @@ const UserSalesDetails = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const [userResponse, salesResponse] = await Promise.all([
+        const [userResponse, salesResponse, addressResponse] = await Promise.all([
           API.get(`/auth/users/${id}`),
-          API.get(`/ventas/usuario/${id}`)
+          API.get(`/ventas/usuario/${id}`),
+          API.get(`/address/usuario/${id}`)
         ]);
         setUser(userResponse.data.response);
         setSalesList(salesResponse.data.response || []);
+        setAddress(addressResponse.data.response || []);
       } catch (err) {
         setError(err.message);
       } finally {
@@ -35,7 +38,7 @@ const UserSalesDetails = () => {
   }, [id]);
 
   const handlePrint = () => {
-    generatePDFUserAndSales(user, salesList);
+    generatePDFUserAndSales(user, salesList, address);
   };
 
   if (loading) {
@@ -59,7 +62,20 @@ const UserSalesDetails = () => {
           <p className="card-text"><b>Cédula:</b> {user.dni}</p>
           <p className="card-text"><b>Teléfono:</b> {user.phone}</p>
           <p className="card-text"><b>Email:</b> {user.email}</p>
-          <p className="card-text"><b>Dirección:</b> {user.address}</p>
+          {address.length > 0 ? (
+            <div>
+              <p className="card-text"><b>Direcciones:</b></p>
+              <ul>
+                {address.map((add) => (
+                  <li key={add._id}>
+                    {`${add.direccion}, ${add.parroquia}, ${add.municipio}, ${add.estado}`}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : (
+            <p className="card-text">No hay direcciones disponibles.</p>
+          )}
         </div>
       </div>
 
@@ -73,7 +89,7 @@ const UserSalesDetails = () => {
                   <tr>
                     <th>Fecha de Pago</th>
                     <th>Método de Pago</th>
-                    <th>Monto Depositado <span className="small">Nota: Si es pago movil es en Bs</span> </th>  
+                    <th>Monto Depositado <span className="small">Nota: Si es pago móvil es en Bs</span></th>
                     <th>Referencia de Pago</th>
                     <th>Productos</th>
                   </tr>
